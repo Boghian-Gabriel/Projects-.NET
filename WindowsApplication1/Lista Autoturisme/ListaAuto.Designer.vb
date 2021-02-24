@@ -43,6 +43,7 @@ Partial Class ListaAuto
         Me.lblNrTotalInfo = New MaterialSkin.Controls.MaterialLabel()
         Me.lblInfoSelectate = New MaterialSkin.Controls.MaterialLabel()
         Me.lblInfoNeselectate = New MaterialSkin.Controls.MaterialLabel()
+        Me.MaterialCheckBox1 = New MaterialSkin.Controls.MaterialCheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -122,6 +123,8 @@ Partial Class ListaAuto
         '
         'chklstbox_Auto
         '
+        Me.chklstbox_Auto.CheckOnClick = True
+        Me.chklstbox_Auto.Font = New System.Drawing.Font("Yu Gothic UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chklstbox_Auto.FormattingEnabled = True
         Me.chklstbox_Auto.Location = New System.Drawing.Point(336, 103)
         Me.chklstbox_Auto.Name = "chklstbox_Auto"
@@ -199,10 +202,12 @@ Partial Class ListaAuto
         '
         'lstBoxAuto
         '
+        Me.lstBoxAuto.Font = New System.Drawing.Font("Yu Gothic UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstBoxAuto.FormattingEnabled = True
+        Me.lstBoxAuto.ItemHeight = 17
         Me.lstBoxAuto.Location = New System.Drawing.Point(336, 343)
         Me.lstBoxAuto.Name = "lstBoxAuto"
-        Me.lstBoxAuto.Size = New System.Drawing.Size(447, 147)
+        Me.lstBoxAuto.Size = New System.Drawing.Size(447, 140)
         Me.lstBoxAuto.TabIndex = 10
         '
         'GroupBox2
@@ -298,11 +303,27 @@ Partial Class ListaAuto
         Me.lblInfoNeselectate.TabIndex = 17
         Me.lblInfoNeselectate.Text = "-"
         '
+        'MaterialCheckBox1
+        '
+        Me.MaterialCheckBox1.Depth = 0
+        Me.MaterialCheckBox1.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.MaterialCheckBox1.Location = New System.Drawing.Point(25, 260)
+        Me.MaterialCheckBox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.MaterialCheckBox1.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.MaterialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialCheckBox1.Name = "MaterialCheckBox1"
+        Me.MaterialCheckBox1.Ripple = True
+        Me.MaterialCheckBox1.Size = New System.Drawing.Size(270, 30)
+        Me.MaterialCheckBox1.TabIndex = 12
+        Me.MaterialCheckBox1.Text = "Selecteaza/Deselecteaza (Tot)"
+        Me.MaterialCheckBox1.UseVisualStyleBackColor = True
+        '
         'ListaAuto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(795, 550)
+        Me.Controls.Add(Me.MaterialCheckBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.lstBoxAuto)
         Me.Controls.Add(Me.MaterialLabel4)
@@ -346,4 +367,5 @@ Partial Class ListaAuto
     Friend WithEvents lblInfoNeselectate As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents lblInfoSelectate As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents lblNrTotalInfo As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents MaterialCheckBox1 As MaterialSkin.Controls.MaterialCheckBox
 End Class
