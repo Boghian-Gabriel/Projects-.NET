@@ -1,5 +1,6 @@
 ﻿Imports MaterialSkin
 
+#Region "Project List Auto"
 Public Class ListaAuto
 
 #Region "Instantiere Clase si declarare liste"
@@ -9,17 +10,22 @@ Public Class ListaAuto
     Dim auto As List(Of Autoturisme) = CreateListAuto()
 
 #End Region
+
+#Region "Design Forma"
     Private Sub ListaAuto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim skinManager As MaterialSkinManager = MaterialSkinManager.Instance
         skinManager.AddFormToManage(Me)
         skinManager.Theme = MaterialSkinManager.Themes.LIGHT
         skinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
     End Sub
+#End Region
 
+#Region "Cand inchid fereastra, apare forma principala de undeselectez alte proiecte"
     Private Sub ListaAuto_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Dim form1 As New Chose
         Chose.Show()
     End Sub
+#End Region
 
 #Region "Functie ce Afiseaza autoturismele folosind LINQ"
     Private Sub Afisare_Auto()
@@ -56,12 +62,12 @@ Public Class ListaAuto
             }
     End Function
 #End Region
+
 #Region "Afiseaza lista cu autoturisme"
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
         Afisare_Auto()
     End Sub
 #End Region
-
 
 #Region "Adaugare Autoturisme in lista principala CheckBoxList"
     Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton2.Click
@@ -92,6 +98,7 @@ Public Class ListaAuto
     End Sub
 #End Region
 
+#Region "Adauga Informatii in lista favorita"
     Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton3.Click
         If chklstbox_Auto.CheckedItems.Count = 0 Then
             MessageBox.Show("Te rugam sa selectati cel putin o optiune din lista de mai sus!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -119,6 +126,8 @@ Public Class ListaAuto
         Next
     End Sub
 
+#End Region
+
 #Region "Informatii despre ChekBoxList - Auto "
     Private Sub chklstbox_Auto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles chklstbox_Auto.SelectedIndexChanged
         'nr de iteme selectate din CheckListBox
@@ -138,6 +147,7 @@ Public Class ListaAuto
 
     End Sub
 #End Region
+
 #Region "Verific daca check box-ul este bifat, atunci bifez toate informatiile din checkedListBox"
     Private Sub MaterialCheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialCheckBox1.CheckedChanged
         If chklstbox_Auto.Items.Count <> 0 Then
@@ -249,3 +259,5 @@ Public Class ListaAuto
 #End Region
 
 End Class
+
+#End Region
