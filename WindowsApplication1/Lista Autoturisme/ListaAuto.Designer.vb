@@ -22,6 +22,7 @@ Partial Class ListaAuto
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ListaAuto))
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
@@ -221,7 +222,7 @@ Partial Class ListaAuto
         Me.GroupBox2.Controls.Add(Me.MaterialLabel5)
         Me.GroupBox2.Location = New System.Drawing.Point(25, 343)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(270, 128)
+        Me.GroupBox2.Size = New System.Drawing.Size(270, 140)
         Me.GroupBox2.TabIndex = 11
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Informatii despre Lista cu Autoturisme"
@@ -232,7 +233,7 @@ Partial Class ListaAuto
         Me.lblInfoNeselectate.Depth = 0
         Me.lblInfoNeselectate.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.lblInfoNeselectate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblInfoNeselectate.Location = New System.Drawing.Point(176, 99)
+        Me.lblInfoNeselectate.Location = New System.Drawing.Point(176, 102)
         Me.lblInfoNeselectate.MouseState = MaterialSkin.MouseState.HOVER
         Me.lblInfoNeselectate.Name = "lblInfoNeselectate"
         Me.lblInfoNeselectate.Size = New System.Drawing.Size(13, 19)
@@ -245,7 +246,7 @@ Partial Class ListaAuto
         Me.lblInfoSelectate.Depth = 0
         Me.lblInfoSelectate.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.lblInfoSelectate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblInfoSelectate.Location = New System.Drawing.Point(157, 68)
+        Me.lblInfoSelectate.Location = New System.Drawing.Point(157, 70)
         Me.lblInfoSelectate.MouseState = MaterialSkin.MouseState.HOVER
         Me.lblInfoSelectate.Name = "lblInfoSelectate"
         Me.lblInfoSelectate.Size = New System.Drawing.Size(13, 19)
@@ -258,7 +259,7 @@ Partial Class ListaAuto
         Me.lblNrTotalInfo.Depth = 0
         Me.lblNrTotalInfo.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.lblNrTotalInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblNrTotalInfo.Location = New System.Drawing.Point(210, 37)
+        Me.lblNrTotalInfo.Location = New System.Drawing.Point(210, 39)
         Me.lblNrTotalInfo.MouseState = MaterialSkin.MouseState.HOVER
         Me.lblNrTotalInfo.Name = "lblNrTotalInfo"
         Me.lblNrTotalInfo.Size = New System.Drawing.Size(13, 19)
@@ -271,7 +272,7 @@ Partial Class ListaAuto
         Me.MaterialLabel7.Depth = 0
         Me.MaterialLabel7.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel7.Location = New System.Drawing.Point(6, 99)
+        Me.MaterialLabel7.Location = New System.Drawing.Point(6, 102)
         Me.MaterialLabel7.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel7.Name = "MaterialLabel7"
         Me.MaterialLabel7.Size = New System.Drawing.Size(164, 19)
@@ -284,7 +285,7 @@ Partial Class ListaAuto
         Me.MaterialLabel6.Depth = 0
         Me.MaterialLabel6.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel6.Location = New System.Drawing.Point(6, 68)
+        Me.MaterialLabel6.Location = New System.Drawing.Point(6, 70)
         Me.MaterialLabel6.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel6.Name = "MaterialLabel6"
         Me.MaterialLabel6.Size = New System.Drawing.Size(148, 19)
@@ -297,7 +298,7 @@ Partial Class ListaAuto
         Me.MaterialLabel5.Depth = 0
         Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel5.Location = New System.Drawing.Point(6, 37)
+        Me.MaterialLabel5.Location = New System.Drawing.Point(6, 39)
         Me.MaterialLabel5.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel5.Name = "MaterialLabel5"
         Me.MaterialLabel5.Size = New System.Drawing.Size(198, 19)
@@ -335,6 +336,7 @@ Partial Class ListaAuto
         Me.Controls.Add(Me.MaterialRaisedButton1)
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ListaAuto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Lista Autoturisme"

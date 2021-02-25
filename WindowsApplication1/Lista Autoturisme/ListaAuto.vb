@@ -67,9 +67,13 @@ Public Class ListaAuto
     Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton2.Click
         If txtMarca.Text = String.Empty Or txtModel.Text = String.Empty Then
             MessageBox.Show("Trebuie sa completati toate campurile corespunzator", " Information ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
+
         ElseIf chklstbox_Auto.Items.Count = 0 Then
             MessageBox.Show("Inainte de a adauga un nou autoturism, trebuie sa afisati lista!", " Information ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
+            txtMarca.BackColor = Color.White
+            txtModel.BackColor = Color.White
             autoo.Marca = txtMarca.Text
             autoo.Model = txtModel.Text
 
@@ -82,6 +86,8 @@ Public Class ListaAuto
             MessageBox.Show($"Autoturismul [MARCA] : {autoo.Marca} - [MODELUL] : {autoo.Model} a fost adaugat cu succes in lista!", " Information ", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
             '[INFO] - Dupa ce obiectul a fost adaugat cu succes, se sterg toate informatiile din respectivele textBox-uri.
             ClearTxtBox()
+            Actualizez_Info()
+
         End If
     End Sub
 #End Region
@@ -132,6 +138,7 @@ Public Class ListaAuto
 
     End Sub
 #End Region
+#Region "Verific daca check box-ul este bifat, atunci bifez toate informatiile din checkedListBox"
     Private Sub MaterialCheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialCheckBox1.CheckedChanged
         If chklstbox_Auto.Items.Count <> 0 Then
 
@@ -143,20 +150,30 @@ Public Class ListaAuto
                 End If
             Next
             'MessageBox.Show("nr total este: " & chklstbox_Auto.Items.Count)
-
+            Actualizez_Info()
         Else
             VerificCheckBoxDacaEsteBifatIlDebifezCuMesajDeEroare()
             'MessageBox.Show("Pentru a putea selecta toate informatiile, ar trebui ca sa afisati informatiile apasand butonul de mai jos!", "Informatie", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
 
+
+    End Sub
+#End Region
+
+#Region "Actualizez informatiile din group-box-ul desre CheckedBoxLixt"
+    Private Sub Actualizez_Info()
+
+        lblNrTotalInfo.Text = chklstbox_Auto.Items.Count
+
         If MaterialCheckBox1.Checked = True Then
             lblInfoSelectate.Text = chklstbox_Auto.CheckedItems.Count
-            lblInfoNeselectate.Text = "0"
+            lblInfoNeselectate.Text = chklstbox_Auto.Items.Count - chklstbox_Auto.CheckedItems.Count
         Else
             lblInfoNeselectate.Text = chklstbox_Auto.Items.Count - chklstbox_Auto.CheckedItems.Count
-            lblInfoSelectate.Text = "0"
+            lblInfoSelectate.Text = chklstbox_Auto.CheckedItems.Count
         End If
     End Sub
+#End Region
 
 #Region "Verific daca CheckBox-ul este bifat, atunci il debifez"
     Private Sub VerificCheckBoxDacaEsteBifatIlDebifez()
@@ -193,6 +210,7 @@ Public Class ListaAuto
             MessageBox.Show("Momentan lista dumneavoastra cu autoturisme favorite nu  este populata! Selectati si adaugati din lista de mai sus!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
         VerificCheckBoxDacaEsteBifatIlDebifez()
+        Actualizez_Info()
     End Sub
 #End Region
 
