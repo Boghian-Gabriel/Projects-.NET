@@ -256,6 +256,10 @@ Public Class ListaAuto
         txtMarca.Text = ""
         txtModel.Text = ""
     End Sub
+
+    Private Sub ToolStripStatusLabel1_Click(sender As Object, e As EventArgs)
+
+    End Sub
 #End Region
 
 End Class

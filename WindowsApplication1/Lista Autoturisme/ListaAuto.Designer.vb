@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ListaAuto
     Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class ListaAuto
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ListaAuto))
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
@@ -64,8 +64,8 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton1
         '
-        Me.MaterialRaisedButton1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton1.Depth = 0
+        Me.MaterialRaisedButton1.FlatAppearance.BorderSize = 0
         Me.MaterialRaisedButton1.Location = New System.Drawing.Point(336, 263)
         Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
@@ -77,9 +77,8 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton2
         '
-        Me.MaterialRaisedButton2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton2.Depth = 0
-        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(74, 112)
+        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(74, 105)
         Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton2.Name = "MaterialRaisedButton2"
         Me.MaterialRaisedButton2.Primary = True
@@ -90,8 +89,8 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton3
         '
-        Me.MaterialRaisedButton3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton3.Depth = 0
+        Me.MaterialRaisedButton3.FlatAppearance.BorderSize = 0
         Me.MaterialRaisedButton3.Location = New System.Drawing.Point(583, 263)
         Me.MaterialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton3.Name = "MaterialRaisedButton3"
@@ -103,9 +102,9 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton4
         '
-        Me.MaterialRaisedButton4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton4.Depth = 0
-        Me.MaterialRaisedButton4.Location = New System.Drawing.Point(583, 505)
+        Me.MaterialRaisedButton4.FlatAppearance.BorderSize = 0
+        Me.MaterialRaisedButton4.Location = New System.Drawing.Point(583, 489)
         Me.MaterialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton4.Name = "MaterialRaisedButton4"
         Me.MaterialRaisedButton4.Primary = True
@@ -116,9 +115,9 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton5
         '
-        Me.MaterialRaisedButton5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton5.Depth = 0
-        Me.MaterialRaisedButton5.Location = New System.Drawing.Point(336, 505)
+        Me.MaterialRaisedButton5.FlatAppearance.BorderSize = 0
+        Me.MaterialRaisedButton5.Location = New System.Drawing.Point(336, 489)
         Me.MaterialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton5.Name = "MaterialRaisedButton5"
         Me.MaterialRaisedButton5.Primary = True
@@ -159,7 +158,7 @@ Partial Class ListaAuto
         Me.GroupBox1.Controls.Add(Me.MaterialRaisedButton2)
         Me.GroupBox1.Location = New System.Drawing.Point(25, 103)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(270, 154)
+        Me.GroupBox1.Size = New System.Drawing.Size(270, 144)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Adauga"
@@ -314,13 +313,13 @@ Partial Class ListaAuto
         '
         Me.MaterialCheckBox1.Depth = 0
         Me.MaterialCheckBox1.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialCheckBox1.Location = New System.Drawing.Point(25, 260)
+        Me.MaterialCheckBox1.Location = New System.Drawing.Point(25, 263)
         Me.MaterialCheckBox1.Margin = New System.Windows.Forms.Padding(0)
         Me.MaterialCheckBox1.MouseLocation = New System.Drawing.Point(-1, -1)
         Me.MaterialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialCheckBox1.Name = "MaterialCheckBox1"
         Me.MaterialCheckBox1.Ripple = True
-        Me.MaterialCheckBox1.Size = New System.Drawing.Size(270, 30)
+        Me.MaterialCheckBox1.Size = New System.Drawing.Size(270, 33)
         Me.MaterialCheckBox1.TabIndex = 12
         Me.MaterialCheckBox1.Text = "Selecteaza/Deselecteaza (Tot)"
         Me.MaterialCheckBox1.UseVisualStyleBackColor = True
@@ -329,7 +328,7 @@ Partial Class ListaAuto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(795, 550)
+        Me.ClientSize = New System.Drawing.Size(795, 554)
         Me.Controls.Add(Me.MaterialCheckBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.lstBoxAuto)
@@ -342,6 +341,7 @@ Partial Class ListaAuto
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MinimumSize = New System.Drawing.Size(795, 530)
         Me.Name = "ListaAuto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Lista Autoturisme"

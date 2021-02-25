@@ -29,20 +29,24 @@ Partial Class Chose
         '
         'GroupBox1
         '
+        Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.BackColor = System.Drawing.Color.White
         Me.GroupBox1.Controls.Add(Me.MaterialRaisedButton1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 76)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(296, 235)
+        Me.GroupBox1.Size = New System.Drawing.Size(332, 232)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Aplicatii:"
         '
         'MaterialRaisedButton1
         '
+        Me.MaterialRaisedButton1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.MaterialRaisedButton1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton1.Depth = 0
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(37, 35)
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(55, 35)
         Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
         Me.MaterialRaisedButton1.Primary = True
@@ -56,8 +60,9 @@ Partial Class Chose
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(321, 323)
+        Me.ClientSize = New System.Drawing.Size(356, 320)
         Me.Controls.Add(Me.GroupBox1)
+        Me.MinimumSize = New System.Drawing.Size(262, 280)
         Me.Name = "Chose"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Alege una din aplicatii"
