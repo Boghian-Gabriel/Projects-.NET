@@ -45,12 +45,14 @@ Partial Class ListaAuto
         Me.MaterialLabel6 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialCheckBox1 = New MaterialSkin.Controls.MaterialCheckBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'MaterialLabel1
         '
+        Me.MaterialLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.MaterialLabel1.AutoSize = True
         Me.MaterialLabel1.Depth = 0
         Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
@@ -64,6 +66,7 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton1
         '
+        Me.MaterialRaisedButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.MaterialRaisedButton1.Depth = 0
         Me.MaterialRaisedButton1.FlatAppearance.BorderSize = 0
         Me.MaterialRaisedButton1.Location = New System.Drawing.Point(336, 263)
@@ -77,6 +80,7 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton2
         '
+        Me.MaterialRaisedButton2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.MaterialRaisedButton2.Depth = 0
         Me.MaterialRaisedButton2.Location = New System.Drawing.Point(74, 105)
         Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
@@ -89,6 +93,7 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton3
         '
+        Me.MaterialRaisedButton3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.MaterialRaisedButton3.Depth = 0
         Me.MaterialRaisedButton3.FlatAppearance.BorderSize = 0
         Me.MaterialRaisedButton3.Location = New System.Drawing.Point(583, 263)
@@ -102,6 +107,7 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton4
         '
+        Me.MaterialRaisedButton4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.MaterialRaisedButton4.Depth = 0
         Me.MaterialRaisedButton4.FlatAppearance.BorderSize = 0
         Me.MaterialRaisedButton4.Location = New System.Drawing.Point(583, 489)
@@ -115,6 +121,7 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton5
         '
+        Me.MaterialRaisedButton5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.MaterialRaisedButton5.Depth = 0
         Me.MaterialRaisedButton5.FlatAppearance.BorderSize = 0
         Me.MaterialRaisedButton5.Location = New System.Drawing.Point(336, 489)
@@ -128,6 +135,9 @@ Partial Class ListaAuto
         '
         'chklstbox_Auto
         '
+        Me.chklstbox_Auto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chklstbox_Auto.CheckOnClick = True
         Me.chklstbox_Auto.Font = New System.Drawing.Font("Yu Gothic UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chklstbox_Auto.FormattingEnabled = True
@@ -138,6 +148,7 @@ Partial Class ListaAuto
         '
         'MaterialLabel2
         '
+        Me.MaterialLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.MaterialLabel2.AutoSize = True
         Me.MaterialLabel2.Depth = 0
         Me.MaterialLabel2.Font = New System.Drawing.Font("Roboto", 11.0!)
@@ -165,6 +176,7 @@ Partial Class ListaAuto
         '
         'MaterialLabel3
         '
+        Me.MaterialLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.MaterialLabel3.AutoSize = True
         Me.MaterialLabel3.Depth = 0
         Me.MaterialLabel3.Font = New System.Drawing.Font("Roboto", 11.0!)
@@ -178,6 +190,7 @@ Partial Class ListaAuto
         '
         'txtModel
         '
+        Me.txtModel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtModel.Location = New System.Drawing.Point(74, 66)
         Me.txtModel.Name = "txtModel"
         Me.txtModel.Size = New System.Drawing.Size(185, 22)
@@ -186,6 +199,7 @@ Partial Class ListaAuto
         '
         'txtMarca
         '
+        Me.txtMarca.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtMarca.Location = New System.Drawing.Point(74, 30)
         Me.txtMarca.Name = "txtMarca"
         Me.txtMarca.Size = New System.Drawing.Size(185, 22)
@@ -194,6 +208,7 @@ Partial Class ListaAuto
         '
         'MaterialLabel4
         '
+        Me.MaterialLabel4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.MaterialLabel4.AutoSize = True
         Me.MaterialLabel4.Depth = 0
         Me.MaterialLabel4.Font = New System.Drawing.Font("Roboto", 11.0!)
@@ -207,10 +222,12 @@ Partial Class ListaAuto
         '
         'lstBoxAuto
         '
+        Me.lstBoxAuto.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lstBoxAuto.Font = New System.Drawing.Font("Yu Gothic UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstBoxAuto.FormattingEnabled = True
         Me.lstBoxAuto.ItemHeight = 17
-        Me.lstBoxAuto.Location = New System.Drawing.Point(336, 343)
+        Me.lstBoxAuto.Location = New System.Drawing.Point(336, 337)
         Me.lstBoxAuto.Name = "lstBoxAuto"
         Me.lstBoxAuto.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
         Me.lstBoxAuto.Size = New System.Drawing.Size(447, 140)
@@ -233,6 +250,7 @@ Partial Class ListaAuto
         '
         'lblInfoNeselectate
         '
+        Me.lblInfoNeselectate.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblInfoNeselectate.AutoSize = True
         Me.lblInfoNeselectate.Depth = 0
         Me.lblInfoNeselectate.Font = New System.Drawing.Font("Roboto", 11.0!)
@@ -246,6 +264,7 @@ Partial Class ListaAuto
         '
         'lblInfoSelectate
         '
+        Me.lblInfoSelectate.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblInfoSelectate.AutoSize = True
         Me.lblInfoSelectate.Depth = 0
         Me.lblInfoSelectate.Font = New System.Drawing.Font("Roboto", 11.0!)
@@ -259,6 +278,7 @@ Partial Class ListaAuto
         '
         'lblNrTotalInfo
         '
+        Me.lblNrTotalInfo.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblNrTotalInfo.AutoSize = True
         Me.lblNrTotalInfo.Depth = 0
         Me.lblNrTotalInfo.Font = New System.Drawing.Font("Roboto", 11.0!)
@@ -272,6 +292,7 @@ Partial Class ListaAuto
         '
         'MaterialLabel7
         '
+        Me.MaterialLabel7.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.MaterialLabel7.AutoSize = True
         Me.MaterialLabel7.Depth = 0
         Me.MaterialLabel7.Font = New System.Drawing.Font("Roboto", 11.0!)
@@ -285,6 +306,7 @@ Partial Class ListaAuto
         '
         'MaterialLabel6
         '
+        Me.MaterialLabel6.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.MaterialLabel6.AutoSize = True
         Me.MaterialLabel6.Depth = 0
         Me.MaterialLabel6.Font = New System.Drawing.Font("Roboto", 11.0!)
@@ -298,6 +320,7 @@ Partial Class ListaAuto
         '
         'MaterialLabel5
         '
+        Me.MaterialLabel5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.MaterialLabel5.AutoSize = True
         Me.MaterialLabel5.Depth = 0
         Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
@@ -324,11 +347,21 @@ Partial Class ListaAuto
         Me.MaterialCheckBox1.Text = "Selecteaza/Deselecteaza (Tot)"
         Me.MaterialCheckBox1.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Location = New System.Drawing.Point(0, 64)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(312, 469)
+        Me.Panel1.TabIndex = 13
+        '
         'ListaAuto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(795, 554)
+        Me.ClientSize = New System.Drawing.Size(795, 530)
         Me.Controls.Add(Me.MaterialCheckBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.lstBoxAuto)
@@ -340,6 +373,7 @@ Partial Class ListaAuto
         Me.Controls.Add(Me.MaterialRaisedButton1)
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(795, 530)
         Me.Name = "ListaAuto"
@@ -376,4 +410,5 @@ Partial Class ListaAuto
     Friend WithEvents lblInfoSelectate As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents lblNrTotalInfo As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialCheckBox1 As MaterialSkin.Controls.MaterialCheckBox
+    Friend WithEvents Panel1 As Panel
 End Class

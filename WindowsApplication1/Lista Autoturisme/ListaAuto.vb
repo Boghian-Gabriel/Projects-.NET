@@ -17,6 +17,7 @@ Public Class ListaAuto
         skinManager.AddFormToManage(Me)
         skinManager.Theme = MaterialSkinManager.Themes.LIGHT
         skinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
+
     End Sub
 #End Region
 
@@ -261,6 +262,11 @@ Public Class ListaAuto
 
     End Sub
 #End Region
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+        Panel1.BackColor = Color.FromArgb(38, 50, 56)
+    End Sub
 
 End Class
 
