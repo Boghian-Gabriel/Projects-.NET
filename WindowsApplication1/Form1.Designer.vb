@@ -22,51 +22,49 @@ Partial Class Chose
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.MaterialFlatButton1 = New MaterialSkin.Controls.MaterialFlatButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'MaterialFlatButton1
-        '
-        Me.MaterialFlatButton1.AutoSize = True
-        Me.MaterialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.MaterialFlatButton1.Depth = 0
-        Me.MaterialFlatButton1.Location = New System.Drawing.Point(103, 105)
-        Me.MaterialFlatButton1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.MaterialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialFlatButton1.Name = "MaterialFlatButton1"
-        Me.MaterialFlatButton1.Primary = False
-        Me.MaterialFlatButton1.Size = New System.Drawing.Size(160, 36)
-        Me.MaterialFlatButton1.TabIndex = 0
-        Me.MaterialFlatButton1.Text = "1. Liste Autoturisme"
-        Me.MaterialFlatButton1.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.MaterialRaisedButton1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 76)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(345, 235)
+        Me.GroupBox1.Size = New System.Drawing.Size(296, 235)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Aplicatii:"
+        '
+        'MaterialRaisedButton1
+        '
+        Me.MaterialRaisedButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.MaterialRaisedButton1.Depth = 0
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(37, 35)
+        Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
+        Me.MaterialRaisedButton1.Primary = True
+        Me.MaterialRaisedButton1.Size = New System.Drawing.Size(222, 30)
+        Me.MaterialRaisedButton1.TabIndex = 0
+        Me.MaterialRaisedButton1.Text = "1. Liste Autoturisme"
+        Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
         '
         'Chose
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(369, 323)
-        Me.Controls.Add(Me.MaterialFlatButton1)
+        Me.ClientSize = New System.Drawing.Size(321, 323)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Chose"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Alege una din aplicatii"
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents MaterialFlatButton1 As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
 End Class

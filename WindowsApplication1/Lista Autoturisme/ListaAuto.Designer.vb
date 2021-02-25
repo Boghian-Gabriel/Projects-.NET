@@ -64,6 +64,7 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton1
         '
+        Me.MaterialRaisedButton1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton1.Depth = 0
         Me.MaterialRaisedButton1.Location = New System.Drawing.Point(336, 263)
         Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
@@ -76,6 +77,7 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton2
         '
+        Me.MaterialRaisedButton2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton2.Depth = 0
         Me.MaterialRaisedButton2.Location = New System.Drawing.Point(74, 112)
         Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
@@ -88,6 +90,7 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton3
         '
+        Me.MaterialRaisedButton3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton3.Depth = 0
         Me.MaterialRaisedButton3.Location = New System.Drawing.Point(583, 263)
         Me.MaterialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER
@@ -100,6 +103,7 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton4
         '
+        Me.MaterialRaisedButton4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton4.Depth = 0
         Me.MaterialRaisedButton4.Location = New System.Drawing.Point(583, 505)
         Me.MaterialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER
@@ -112,6 +116,7 @@ Partial Class ListaAuto
         '
         'MaterialRaisedButton5
         '
+        Me.MaterialRaisedButton5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton5.Depth = 0
         Me.MaterialRaisedButton5.Location = New System.Drawing.Point(336, 505)
         Me.MaterialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER
