@@ -71,10 +71,11 @@ Public Class ListaAuto
 #End Region
 
 #Region "Adaugare Autoturisme in lista principala CheckBoxList"
-    Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs)
+    Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton2.Click
         If txtMarca.Text = String.Empty Or txtModel.Text = String.Empty Then
             MessageBox.Show("Trebuie sa completati toate campurile corespunzator", " Information ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-
+            txtMarca.BackColor = Color.Gray
+            txtModel.BackColor = Color.Gray
 
         ElseIf chklstbox_Auto.Items.Count = 0 Then
             MessageBox.Show("Inainte de a adauga un nou autoturism, trebuie sa afisati lista!", " Information ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -150,7 +151,7 @@ Public Class ListaAuto
 #End Region
 
 #Region "Verific daca check box-ul este bifat, atunci bifez toate informatiile din checkedListBox"
-    Private Sub MaterialCheckBox1_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub MaterialCheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialCheckBox1.CheckedChanged
         If chklstbox_Auto.Items.Count <> 0 Then
 
             For i As Integer = 0 To chklstbox_Auto.Items.Count - 1 Step 1
