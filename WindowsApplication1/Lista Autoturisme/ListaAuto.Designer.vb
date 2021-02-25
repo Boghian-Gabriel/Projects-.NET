@@ -71,9 +71,10 @@ Partial Class ListaAuto
         'MaterialRaisedButton1
         '
         Me.MaterialRaisedButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.MaterialRaisedButton1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton1.Depth = 0
         Me.MaterialRaisedButton1.FlatAppearance.BorderSize = 0
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(336, 337)
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(336, 313)
         Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
         Me.MaterialRaisedButton1.Primary = True
@@ -85,9 +86,10 @@ Partial Class ListaAuto
         'MaterialRaisedButton3
         '
         Me.MaterialRaisedButton3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.MaterialRaisedButton3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton3.Depth = 0
         Me.MaterialRaisedButton3.FlatAppearance.BorderSize = 0
-        Me.MaterialRaisedButton3.Location = New System.Drawing.Point(583, 337)
+        Me.MaterialRaisedButton3.Location = New System.Drawing.Point(583, 313)
         Me.MaterialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton3.Name = "MaterialRaisedButton3"
         Me.MaterialRaisedButton3.Primary = True
@@ -99,6 +101,7 @@ Partial Class ListaAuto
         'MaterialRaisedButton4
         '
         Me.MaterialRaisedButton4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.MaterialRaisedButton4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton4.Depth = 0
         Me.MaterialRaisedButton4.FlatAppearance.BorderSize = 0
         Me.MaterialRaisedButton4.Location = New System.Drawing.Point(583, 563)
@@ -113,6 +116,7 @@ Partial Class ListaAuto
         'MaterialRaisedButton5
         '
         Me.MaterialRaisedButton5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.MaterialRaisedButton5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton5.Depth = 0
         Me.MaterialRaisedButton5.FlatAppearance.BorderSize = 0
         Me.MaterialRaisedButton5.Location = New System.Drawing.Point(336, 563)
@@ -130,7 +134,7 @@ Partial Class ListaAuto
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chklstbox_Auto.CheckOnClick = True
-        Me.chklstbox_Auto.Font = New System.Drawing.Font("Yu Gothic UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chklstbox_Auto.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chklstbox_Auto.FormattingEnabled = True
         Me.chklstbox_Auto.Location = New System.Drawing.Point(336, 103)
         Me.chklstbox_Auto.Name = "chklstbox_Auto"
@@ -144,7 +148,7 @@ Partial Class ListaAuto
         Me.MaterialLabel4.Depth = 0
         Me.MaterialLabel4.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel4.Location = New System.Drawing.Point(471, 386)
+        Me.MaterialLabel4.Location = New System.Drawing.Point(468, 364)
         Me.MaterialLabel4.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel4.Name = "MaterialLabel4"
         Me.MaterialLabel4.Size = New System.Drawing.Size(202, 19)
@@ -155,13 +159,13 @@ Partial Class ListaAuto
         '
         Me.lstBoxAuto.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lstBoxAuto.Font = New System.Drawing.Font("Yu Gothic UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lstBoxAuto.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstBoxAuto.FormattingEnabled = True
-        Me.lstBoxAuto.ItemHeight = 17
-        Me.lstBoxAuto.Location = New System.Drawing.Point(336, 411)
+        Me.lstBoxAuto.ItemHeight = 21
+        Me.lstBoxAuto.Location = New System.Drawing.Point(336, 394)
         Me.lstBoxAuto.Name = "lstBoxAuto"
         Me.lstBoxAuto.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
-        Me.lstBoxAuto.Size = New System.Drawing.Size(451, 140)
+        Me.lstBoxAuto.Size = New System.Drawing.Size(451, 151)
         Me.lstBoxAuto.TabIndex = 10
         '
         'Panel1
@@ -178,6 +182,7 @@ Partial Class ListaAuto
         '
         Me.GroupBox4.Controls.Add(Me.txtCauta)
         Me.GroupBox4.Controls.Add(Me.btnCauta)
+        Me.GroupBox4.Font = New System.Drawing.Font("Yu Gothic UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.Location = New System.Drawing.Point(25, 103)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(270, 118)
@@ -216,6 +221,7 @@ Partial Class ListaAuto
         Me.GroupBox2.Controls.Add(Me.MaterialLabel7)
         Me.GroupBox2.Controls.Add(Me.MaterialLabel6)
         Me.GroupBox2.Controls.Add(Me.MaterialLabel5)
+        Me.GroupBox2.Font = New System.Drawing.Font("Yu Gothic UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(25, 450)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(270, 146)
@@ -330,6 +336,7 @@ Partial Class ListaAuto
         Me.GroupBox1.Controls.Add(Me.txtMarca)
         Me.GroupBox1.Controls.Add(Me.MaterialRaisedButton2)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.GroupBox1.Font = New System.Drawing.Font("Yu Gothic UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(25, 240)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(270, 143)
@@ -386,6 +393,7 @@ Partial Class ListaAuto
         'MaterialRaisedButton2
         '
         Me.MaterialRaisedButton2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.MaterialRaisedButton2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MaterialRaisedButton2.Depth = 0
         Me.MaterialRaisedButton2.Location = New System.Drawing.Point(74, 100)
         Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER

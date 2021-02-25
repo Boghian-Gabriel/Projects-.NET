@@ -66,7 +66,12 @@ Public Class ListaAuto
 
 #Region "Afiseaza lista cu autoturisme"
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
-        Afisare_Auto()
+        If chklstbox_Auto.Items.Count <> 0 Then
+            chklstbox_Auto.Items.Clear()
+        Else
+            Afisare_Auto()
+        End If
+
     End Sub
 #End Region
 
@@ -246,9 +251,9 @@ Public Class ListaAuto
                 '    chklstbox_Auto.SetItemCheckState(i, CheckState.Unchecked)
                 'End If
             Next
-            MessageBox.Show("Inregistrarea/Inregistrarile a fost stearse cu succes!")
+            MessageBox.Show("Inregistrarea/Inregistrarile a fost stearse cu succes!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
-            MessageBox.Show("Trebuie sa selectezi o inregistrare!")
+            MessageBox.Show("Trebuie sa selectezi o inregistrare!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 #End Region
@@ -269,6 +274,37 @@ Public Class ListaAuto
 
 #Region "Adaugare GroupBox ce cauta un autoturism in lista"
     Private Sub btnCauta_Click(sender As Object, e As EventArgs) Handles btnCauta.Click
+
+        If txtCauta.Text = String.Empty Then
+            MessageBox.Show("Trebuie sa completezi campul de mai sus!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            '    result = chklstbox_Auto.FindStringExact(txtCauta.Text)
+            '    MessageBox.Show($" Informatia a fost gasita: {result.ToString()}")
+            'chklstbox_Auto.Items.Clear()
+            CautaAuto(txtCauta.Text)
+        End If
+    End Sub
+#End Region
+
+#Region "Function SearchAutoInList"
+    Private Sub CautaAuto(ByVal searchItem As String)
+        ' Loop items
+        For Each lbItem As Object In chklstbox_Auto.Items
+            ' Case-sensitive match
+            If lbItem.ToString = searchItem Then
+                ' Match found: set as selected item and exit procedure
+                chklstbox_Auto.SelectedItem = lbItem
+                chklstbox_Auto.Items.Clear()
+                MessageBox.Show("Autoturismul  a fost gasit!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
+                chklstbox_Auto.Items.Add(lbItem)
+                Return
+            Else
+                MessageBox.Show("Autoturismul nu a fost gasit!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
+            End If
+
+        Next
 
     End Sub
 #End Region
