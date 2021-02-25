@@ -31,18 +31,18 @@ Partial Class ListaAuto
         Me.chklstbox_Auto = New System.Windows.Forms.CheckedListBox()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtMarca = New System.Windows.Forms.RichTextBox()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.txtModel = New System.Windows.Forms.RichTextBox()
+        Me.txtMarca = New System.Windows.Forms.RichTextBox()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
         Me.lstBoxAuto = New System.Windows.Forms.ListBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialLabel6 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
-        Me.lblNrTotalInfo = New MaterialSkin.Controls.MaterialLabel()
-        Me.lblInfoSelectate = New MaterialSkin.Controls.MaterialLabel()
         Me.lblInfoNeselectate = New MaterialSkin.Controls.MaterialLabel()
+        Me.lblInfoSelectate = New MaterialSkin.Controls.MaterialLabel()
+        Me.lblNrTotalInfo = New MaterialSkin.Controls.MaterialLabel()
+        Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
+        Me.MaterialLabel6 = New MaterialSkin.Controls.MaterialLabel()
+        Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialCheckBox1 = New MaterialSkin.Controls.MaterialCheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -76,7 +76,7 @@ Partial Class ListaAuto
         'MaterialRaisedButton2
         '
         Me.MaterialRaisedButton2.Depth = 0
-        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(74, 115)
+        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(74, 112)
         Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton2.Name = "MaterialRaisedButton2"
         Me.MaterialRaisedButton2.Primary = True
@@ -94,17 +94,17 @@ Partial Class ListaAuto
         Me.MaterialRaisedButton3.Primary = True
         Me.MaterialRaisedButton3.Size = New System.Drawing.Size(200, 33)
         Me.MaterialRaisedButton3.TabIndex = 3
-        Me.MaterialRaisedButton3.Text = "Adauga auto favorite"
+        Me.MaterialRaisedButton3.Text = "Adauga in lista favorita"
         Me.MaterialRaisedButton3.UseVisualStyleBackColor = True
         '
         'MaterialRaisedButton4
         '
         Me.MaterialRaisedButton4.Depth = 0
-        Me.MaterialRaisedButton4.Location = New System.Drawing.Point(336, 496)
+        Me.MaterialRaisedButton4.Location = New System.Drawing.Point(583, 505)
         Me.MaterialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton4.Name = "MaterialRaisedButton4"
         Me.MaterialRaisedButton4.Primary = True
-        Me.MaterialRaisedButton4.Size = New System.Drawing.Size(196, 33)
+        Me.MaterialRaisedButton4.Size = New System.Drawing.Size(200, 33)
         Me.MaterialRaisedButton4.TabIndex = 4
         Me.MaterialRaisedButton4.Text = "Sterge toate informatiile"
         Me.MaterialRaisedButton4.UseVisualStyleBackColor = True
@@ -112,11 +112,11 @@ Partial Class ListaAuto
         'MaterialRaisedButton5
         '
         Me.MaterialRaisedButton5.Depth = 0
-        Me.MaterialRaisedButton5.Location = New System.Drawing.Point(538, 496)
+        Me.MaterialRaisedButton5.Location = New System.Drawing.Point(336, 505)
         Me.MaterialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton5.Name = "MaterialRaisedButton5"
         Me.MaterialRaisedButton5.Primary = True
-        Me.MaterialRaisedButton5.Size = New System.Drawing.Size(245, 33)
+        Me.MaterialRaisedButton5.Size = New System.Drawing.Size(241, 33)
         Me.MaterialRaisedButton5.TabIndex = 5
         Me.MaterialRaisedButton5.Text = "Sterge informatiile selectate"
         Me.MaterialRaisedButton5.UseVisualStyleBackColor = True
@@ -128,7 +128,7 @@ Partial Class ListaAuto
         Me.chklstbox_Auto.FormattingEnabled = True
         Me.chklstbox_Auto.Location = New System.Drawing.Point(336, 103)
         Me.chklstbox_Auto.Name = "chklstbox_Auto"
-        Me.chklstbox_Auto.Size = New System.Drawing.Size(447, 154)
+        Me.chklstbox_Auto.Size = New System.Drawing.Size(447, 144)
         Me.chklstbox_Auto.TabIndex = 6
         '
         'MaterialLabel2
@@ -158,14 +158,6 @@ Partial Class ListaAuto
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Adauga"
         '
-        'txtMarca
-        '
-        Me.txtMarca.Location = New System.Drawing.Point(74, 30)
-        Me.txtMarca.Name = "txtMarca"
-        Me.txtMarca.Size = New System.Drawing.Size(185, 22)
-        Me.txtMarca.TabIndex = 0
-        Me.txtMarca.Text = ""
-        '
         'MaterialLabel3
         '
         Me.MaterialLabel3.AutoSize = True
@@ -187,6 +179,14 @@ Partial Class ListaAuto
         Me.txtModel.TabIndex = 8
         Me.txtModel.Text = ""
         '
+        'txtMarca
+        '
+        Me.txtMarca.Location = New System.Drawing.Point(74, 30)
+        Me.txtMarca.Name = "txtMarca"
+        Me.txtMarca.Size = New System.Drawing.Size(185, 22)
+        Me.txtMarca.TabIndex = 0
+        Me.txtMarca.Text = ""
+        '
         'MaterialLabel4
         '
         Me.MaterialLabel4.AutoSize = True
@@ -207,6 +207,7 @@ Partial Class ListaAuto
         Me.lstBoxAuto.ItemHeight = 17
         Me.lstBoxAuto.Location = New System.Drawing.Point(336, 343)
         Me.lstBoxAuto.Name = "lstBoxAuto"
+        Me.lstBoxAuto.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
         Me.lstBoxAuto.Size = New System.Drawing.Size(447, 140)
         Me.lstBoxAuto.TabIndex = 10
         '
@@ -225,57 +226,18 @@ Partial Class ListaAuto
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Informatii despre Lista cu Autoturisme"
         '
-        'MaterialLabel5
+        'lblInfoNeselectate
         '
-        Me.MaterialLabel5.AutoSize = True
-        Me.MaterialLabel5.Depth = 0
-        Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel5.Location = New System.Drawing.Point(6, 37)
-        Me.MaterialLabel5.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel5.Name = "MaterialLabel5"
-        Me.MaterialLabel5.Size = New System.Drawing.Size(198, 19)
-        Me.MaterialLabel5.TabIndex = 12
-        Me.MaterialLabel5.Text = "Numarul total de informatii: "
-        '
-        'MaterialLabel6
-        '
-        Me.MaterialLabel6.AutoSize = True
-        Me.MaterialLabel6.Depth = 0
-        Me.MaterialLabel6.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel6.Location = New System.Drawing.Point(6, 68)
-        Me.MaterialLabel6.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel6.Name = "MaterialLabel6"
-        Me.MaterialLabel6.Size = New System.Drawing.Size(148, 19)
-        Me.MaterialLabel6.TabIndex = 13
-        Me.MaterialLabel6.Text = "Informatii selectate: "
-        '
-        'MaterialLabel7
-        '
-        Me.MaterialLabel7.AutoSize = True
-        Me.MaterialLabel7.Depth = 0
-        Me.MaterialLabel7.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel7.Location = New System.Drawing.Point(6, 99)
-        Me.MaterialLabel7.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel7.Name = "MaterialLabel7"
-        Me.MaterialLabel7.Size = New System.Drawing.Size(164, 19)
-        Me.MaterialLabel7.TabIndex = 14
-        Me.MaterialLabel7.Text = "Informatii neselectate: "
-        '
-        'lblNrTotalInfo
-        '
-        Me.lblNrTotalInfo.AutoSize = True
-        Me.lblNrTotalInfo.Depth = 0
-        Me.lblNrTotalInfo.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.lblNrTotalInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblNrTotalInfo.Location = New System.Drawing.Point(210, 37)
-        Me.lblNrTotalInfo.MouseState = MaterialSkin.MouseState.HOVER
-        Me.lblNrTotalInfo.Name = "lblNrTotalInfo"
-        Me.lblNrTotalInfo.Size = New System.Drawing.Size(13, 19)
-        Me.lblNrTotalInfo.TabIndex = 15
-        Me.lblNrTotalInfo.Text = "-"
+        Me.lblInfoNeselectate.AutoSize = True
+        Me.lblInfoNeselectate.Depth = 0
+        Me.lblInfoNeselectate.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.lblInfoNeselectate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblInfoNeselectate.Location = New System.Drawing.Point(176, 99)
+        Me.lblInfoNeselectate.MouseState = MaterialSkin.MouseState.HOVER
+        Me.lblInfoNeselectate.Name = "lblInfoNeselectate"
+        Me.lblInfoNeselectate.Size = New System.Drawing.Size(13, 19)
+        Me.lblInfoNeselectate.TabIndex = 17
+        Me.lblInfoNeselectate.Text = "-"
         '
         'lblInfoSelectate
         '
@@ -290,18 +252,57 @@ Partial Class ListaAuto
         Me.lblInfoSelectate.TabIndex = 16
         Me.lblInfoSelectate.Text = "-"
         '
-        'lblInfoNeselectate
+        'lblNrTotalInfo
         '
-        Me.lblInfoNeselectate.AutoSize = True
-        Me.lblInfoNeselectate.Depth = 0
-        Me.lblInfoNeselectate.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.lblInfoNeselectate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblInfoNeselectate.Location = New System.Drawing.Point(176, 99)
-        Me.lblInfoNeselectate.MouseState = MaterialSkin.MouseState.HOVER
-        Me.lblInfoNeselectate.Name = "lblInfoNeselectate"
-        Me.lblInfoNeselectate.Size = New System.Drawing.Size(13, 19)
-        Me.lblInfoNeselectate.TabIndex = 17
-        Me.lblInfoNeselectate.Text = "-"
+        Me.lblNrTotalInfo.AutoSize = True
+        Me.lblNrTotalInfo.Depth = 0
+        Me.lblNrTotalInfo.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.lblNrTotalInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblNrTotalInfo.Location = New System.Drawing.Point(210, 37)
+        Me.lblNrTotalInfo.MouseState = MaterialSkin.MouseState.HOVER
+        Me.lblNrTotalInfo.Name = "lblNrTotalInfo"
+        Me.lblNrTotalInfo.Size = New System.Drawing.Size(13, 19)
+        Me.lblNrTotalInfo.TabIndex = 15
+        Me.lblNrTotalInfo.Text = "-"
+        '
+        'MaterialLabel7
+        '
+        Me.MaterialLabel7.AutoSize = True
+        Me.MaterialLabel7.Depth = 0
+        Me.MaterialLabel7.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel7.Location = New System.Drawing.Point(6, 99)
+        Me.MaterialLabel7.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel7.Name = "MaterialLabel7"
+        Me.MaterialLabel7.Size = New System.Drawing.Size(164, 19)
+        Me.MaterialLabel7.TabIndex = 14
+        Me.MaterialLabel7.Text = "Informatii neselectate: "
+        '
+        'MaterialLabel6
+        '
+        Me.MaterialLabel6.AutoSize = True
+        Me.MaterialLabel6.Depth = 0
+        Me.MaterialLabel6.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel6.Location = New System.Drawing.Point(6, 68)
+        Me.MaterialLabel6.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel6.Name = "MaterialLabel6"
+        Me.MaterialLabel6.Size = New System.Drawing.Size(148, 19)
+        Me.MaterialLabel6.TabIndex = 13
+        Me.MaterialLabel6.Text = "Informatii selectate: "
+        '
+        'MaterialLabel5
+        '
+        Me.MaterialLabel5.AutoSize = True
+        Me.MaterialLabel5.Depth = 0
+        Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel5.Location = New System.Drawing.Point(6, 37)
+        Me.MaterialLabel5.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel5.Name = "MaterialLabel5"
+        Me.MaterialLabel5.Size = New System.Drawing.Size(198, 19)
+        Me.MaterialLabel5.TabIndex = 12
+        Me.MaterialLabel5.Text = "Numarul total de informatii: "
         '
         'MaterialCheckBox1
         '

@@ -62,9 +62,29 @@ Public Class ListaAuto
     End Sub
 #End Region
 
-    Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton2.Click
 
+#Region "Adaugare Autoturisme in lista principala CheckBoxList"
+    Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton2.Click
+        If txtMarca.Text = String.Empty Or txtModel.Text = String.Empty Then
+            MessageBox.Show("Trebuie sa completati toate campurile corespunzator", " Information ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf chklstbox_Auto.Items.Count = 0 Then
+            MessageBox.Show("Inainte de a adauga un nou autoturism, trebuie sa afisati lista!", " Information ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            autoo.Marca = txtMarca.Text
+            autoo.Model = txtModel.Text
+
+            '[ADD] - iteme in lista de Autoturisme
+            lstAuto.Add(New Autoturisme(autoo.Marca, autoo.Model))
+
+            '[ADD] - iteme in ListChekedBox
+            chklstbox_Auto.Items.Add(autoo.ToString())
+            '[INFO] - mesaj care ne specifica ce inregistrare a fost adaugata
+            MessageBox.Show($"Autoturismul [MARCA] : {autoo.Marca} - [MODELUL] : {autoo.Model} a fost adaugat cu succes in lista!", " Information ", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
+            '[INFO] - Dupa ce obiectul a fost adaugat cu succes, se sterg toate informatiile din respectivele textBox-uri.
+            ClearTxtBox()
+        End If
     End Sub
+#End Region
 
     Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton3.Click
         If chklstbox_Auto.CheckedItems.Count = 0 Then
@@ -93,6 +113,25 @@ Public Class ListaAuto
         Next
     End Sub
 
+#Region "Informatii despre ChekBoxList - Auto "
+    Private Sub chklstbox_Auto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles chklstbox_Auto.SelectedIndexChanged
+        'nr de iteme selectate din CheckListBox
+        Dim itemsCheked = chklstbox_Auto.CheckedItems.Count
+
+        'nr total de iteme din CheckListBox
+        Dim nrTotalItemInCheckBoxList = chklstbox_Auto.Items.Count
+
+        'nr total de iteme din CheckedListBox neselectate
+        Dim itemsUnCheked = nrTotalItemInCheckBoxList - itemsCheked
+
+        'label cu toate itemele din Lista
+        lblInfoSelectate.Text = itemsCheked
+
+        'label cu iteme neselectate (din nr total de iteme, scadem itemele selectate)
+        lblInfoNeselectate.Text = chklstbox_Auto.Items.Count - chklstbox_Auto.CheckedItems.Count
+
+    End Sub
+#End Region
     Private Sub MaterialCheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialCheckBox1.CheckedChanged
         If chklstbox_Auto.Items.Count <> 0 Then
 
@@ -108,6 +147,14 @@ Public Class ListaAuto
         Else
             VerificCheckBoxDacaEsteBifatIlDebifezCuMesajDeEroare()
             'MessageBox.Show("Pentru a putea selecta toate informatiile, ar trebui ca sa afisati informatiile apasand butonul de mai jos!", "Informatie", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+
+        If MaterialCheckBox1.Checked = True Then
+            lblInfoSelectate.Text = chklstbox_Auto.CheckedItems.Count
+            lblInfoNeselectate.Text = "0"
+        Else
+            lblInfoNeselectate.Text = chklstbox_Auto.Items.Count - chklstbox_Auto.CheckedItems.Count
+            lblInfoSelectate.Text = "0"
         End If
     End Sub
 
@@ -132,10 +179,55 @@ Public Class ListaAuto
 
 #End Region
 
+#Region "Sterge toate informatiile"
+    Private Sub MaterialRaisedButton4_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton4.Click
+
+        If lstBoxAuto.Items.Count > 0 Then
+            lstBoxAuto.Items.Clear()
+            For i As Integer = 0 To chklstbox_Auto.Items.Count - 1
+                If (chklstbox_Auto.GetItemChecked(i)) Then
+                    chklstbox_Auto.SetItemCheckState(i, CheckState.Unchecked)
+                End If
+            Next
+        Else
+            MessageBox.Show("Momentan lista dumneavoastra cu autoturisme favorite nu  este populata! Selectati si adaugati din lista de mai sus!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+        VerificCheckBoxDacaEsteBifatIlDebifez()
+    End Sub
+#End Region
+
+#Region "Sterge doar informatiile pe care le-ai selectat"
+    Private Sub MaterialRaisedButton5_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton5.Click
+        If lstBoxAuto.SelectedItems.Count <> 0 Then
+            Dim selectedItemCount = lstBoxAuto.SelectedItems.Count
+            Dim i As Integer
+            ' https://stackoverflow.com/questions/24939046/deleting-multiple-or-single-items-from-list-box
+            ' Parcurs de la coada la cap pentru a nu genera erori
+            ' Daca parcurg asa, oricum de la itemele selectate merge pana la 0 si daca sterg mai multe informatii functioneaza
+            ' Pentru  a parcurge de la inceput la sfarsit cu for si sterg mai multe informatii, prima info se sterge iar cealalta da eroare deoarece
+            ' nu mai sunt atatea iteme cum erau la inceput si trebuie sa scap si indexul dar nu e tocmai ok
+            For i = selectedItemCount - 1 To 0 Step -1
+                'MessageBox.Show(selectedItemCount)
+                'lstStudent.SelectedItems(0).Remove()
+                ' lstBoxAuto.Items.RemoveAt(selectedIndex)
+                lstBoxAuto.Items.Remove(lstBoxAuto.SelectedItems(i))
+
+                'If (chklstbox_Auto.GetItemChecked(i)) Then
+                '    chklstbox_Auto.SetItemCheckState(i, CheckState.Unchecked)
+                'End If
+            Next
+            MessageBox.Show("Inregistrarea/Inregistrarile a fost stearse cu succes!")
+        Else
+            MessageBox.Show("Trebuie sa selectezi o inregistrare!")
+        End If
+    End Sub
+#End Region
+
 #Region "Stergere info din textBox"
     Private Sub ClearTxtBox()
         txtMarca.Text = ""
         txtModel.Text = ""
     End Sub
 #End Region
+
 End Class
