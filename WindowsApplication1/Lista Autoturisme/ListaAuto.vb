@@ -281,7 +281,8 @@ Public Class ListaAuto
             '    result = chklstbox_Auto.FindStringExact(txtCauta.Text)
             '    MessageBox.Show($" Informatia a fost gasita: {result.ToString()}")
             'chklstbox_Auto.Items.Clear()
-            CautaAuto(txtCauta.Text)
+            CautaAutov2(txtCauta.Text)
+            'CautaAuto(txtCauta.Text)
         End If
     End Sub
 #End Region
@@ -295,19 +296,31 @@ Public Class ListaAuto
                 ' Match found: set as selected item and exit procedure
                 chklstbox_Auto.SelectedItem = lbItem
                 chklstbox_Auto.Items.Clear()
-                MessageBox.Show("Autoturismul  a fost gasit!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-
                 chklstbox_Auto.Items.Add(lbItem)
                 Return
             Else
-                MessageBox.Show("Autoturismul nu a fost gasit!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
             End If
-
         Next
+        MessageBox.Show("Autoturismul nu a fost gasit!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
     End Sub
 #End Region
+
+#Region "Function SearchAutoInList V2"
+    Private Sub CautaAutov2(ByVal searchItem As String)
+
+        Dim nrItemInChekedBoxLis = chklstbox_Auto.Items.Count - 1
+        Dim i As Integer
+        For i = 0 To nrItemInChekedBoxLis
+            If chklstbox_Auto.Items(i).ToString().ToLower().Contains(searchItem.ToLower()) Then
+                chklstbox_Auto.SetItemChecked(i, True)
+            End If
+        Next
+        mlblInfoGasite.Text = $"Au fost gasite: {chklstbox_Auto.CheckedItems.Count.ToString()} informatii!"
+    End Sub
+#End Region
 End Class
+
 
 #End Region

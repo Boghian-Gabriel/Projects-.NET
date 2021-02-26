@@ -49,6 +49,7 @@ Partial Class ListaAuto
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.txtMarca = New System.Windows.Forms.RichTextBox()
         Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.mlblInfoGasite = New MaterialSkin.Controls.MaterialLabel()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -61,7 +62,7 @@ Partial Class ListaAuto
         Me.MaterialLabel1.Depth = 0
         Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel1.Location = New System.Drawing.Point(499, 74)
+        Me.MaterialLabel1.Location = New System.Drawing.Point(588, 74)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
         Me.MaterialLabel1.Size = New System.Drawing.Size(147, 19)
@@ -138,7 +139,7 @@ Partial Class ListaAuto
         Me.chklstbox_Auto.FormattingEnabled = True
         Me.chklstbox_Auto.Location = New System.Drawing.Point(336, 103)
         Me.chklstbox_Auto.Name = "chklstbox_Auto"
-        Me.chklstbox_Auto.Size = New System.Drawing.Size(451, 204)
+        Me.chklstbox_Auto.Size = New System.Drawing.Size(628, 196)
         Me.chklstbox_Auto.TabIndex = 6
         '
         'MaterialLabel4
@@ -148,7 +149,7 @@ Partial Class ListaAuto
         Me.MaterialLabel4.Depth = 0
         Me.MaterialLabel4.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel4.Location = New System.Drawing.Point(468, 364)
+        Me.MaterialLabel4.Location = New System.Drawing.Point(557, 364)
         Me.MaterialLabel4.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel4.Name = "MaterialLabel4"
         Me.MaterialLabel4.Size = New System.Drawing.Size(202, 19)
@@ -165,7 +166,7 @@ Partial Class ListaAuto
         Me.lstBoxAuto.Location = New System.Drawing.Point(336, 394)
         Me.lstBoxAuto.Name = "lstBoxAuto"
         Me.lstBoxAuto.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
-        Me.lstBoxAuto.Size = New System.Drawing.Size(451, 151)
+        Me.lstBoxAuto.Size = New System.Drawing.Size(628, 151)
         Me.lstBoxAuto.TabIndex = 10
         '
         'Panel1
@@ -404,11 +405,25 @@ Partial Class ListaAuto
         Me.MaterialRaisedButton2.Text = "Adauga un autoturism"
         Me.MaterialRaisedButton2.UseVisualStyleBackColor = True
         '
+        'mlblInfoGasite
+        '
+        Me.mlblInfoGasite.AutoSize = True
+        Me.mlblInfoGasite.Depth = 0
+        Me.mlblInfoGasite.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.mlblInfoGasite.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.mlblInfoGasite.Location = New System.Drawing.Point(332, 81)
+        Me.mlblInfoGasite.MouseState = MaterialSkin.MouseState.HOVER
+        Me.mlblInfoGasite.Name = "mlblInfoGasite"
+        Me.mlblInfoGasite.Size = New System.Drawing.Size(143, 19)
+        Me.mlblInfoGasite.TabIndex = 18
+        Me.mlblInfoGasite.Text = "Nr. Informatii gasite"
+        '
         'ListaAuto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(799, 604)
+        Me.ClientSize = New System.Drawing.Size(976, 604)
+        Me.Controls.Add(Me.mlblInfoGasite)
         Me.Controls.Add(Me.MaterialCheckBox1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox4)
@@ -463,4 +478,5 @@ Partial Class ListaAuto
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents txtMarca As RichTextBox
     Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents mlblInfoGasite As MaterialSkin.Controls.MaterialLabel
 End Class
