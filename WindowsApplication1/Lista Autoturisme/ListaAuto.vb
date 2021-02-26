@@ -4,7 +4,7 @@
 Public Class ListaAuto
 
 #Region "Instantiere Clase si declarare liste"
-
+    Dim message As New MaterialMessageBox
     Dim autoo As New Autoturisme
     Dim lstAuto As New List(Of Autoturisme)
     Dim auto As List(Of Autoturisme) = CreateListAuto()
@@ -276,9 +276,9 @@ Public Class ListaAuto
     Private Sub btnCauta_Click(sender As Object, e As EventArgs) Handles btnCauta.Click
 
         If txtCauta.Text = String.Empty Then
-            MessageBox.Show("Trebuie sa completezi campul de mai sus!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            message.Show("Trebuie sa completezi campul de mai sus!", "Informatii", MessageBoxButtons.OK)
         ElseIf chklstbox_Auto.Items.Count = 0 Then
-            MessageBox.Show("Trebuie sa afisezi lista!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Pentru a cauta o informatie in lista, trebuie sa o afisati si apoi sa cautati!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             'chklstbox_Auto.Items.Clear()
             CautaAutov2(txtCauta.Text)
