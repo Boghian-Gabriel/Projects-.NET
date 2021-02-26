@@ -277,9 +277,9 @@ Public Class ListaAuto
 
         If txtCauta.Text = String.Empty Then
             MessageBox.Show("Trebuie sa completezi campul de mai sus!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf chklstbox_Auto.Items.Count = 0 Then
+            MessageBox.Show("Trebuie sa afisezi lista!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
-            '    result = chklstbox_Auto.FindStringExact(txtCauta.Text)
-            '    MessageBox.Show($" Informatia a fost gasita: {result.ToString()}")
             'chklstbox_Auto.Items.Clear()
             CautaAutov2(txtCauta.Text)
             'CautaAuto(txtCauta.Text)
