@@ -16,8 +16,8 @@ Public Class ListaAuto
         Dim skinManager As MaterialSkinManager = MaterialSkinManager.Instance
         skinManager.AddFormToManage(Me)
         skinManager.Theme = MaterialSkinManager.Themes.LIGHT
-        skinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
-
+        skinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.Red600, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
+        'BlueGrey900
     End Sub
 #End Region
 
@@ -78,12 +78,13 @@ Public Class ListaAuto
 #Region "Adaugare Autoturisme in lista principala CheckBoxList"
     Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton2.Click
         If txtMarca.Text = String.Empty Or txtModel.Text = String.Empty Then
-            MessageBox.Show("Trebuie sa completati toate campurile corespunzator", " Information ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            message.Show("Trebuie sa completati toate campurile corespunzator", " Information ", MessageBoxButtons.OK)
             txtMarca.BackColor = Color.Gray
             txtModel.BackColor = Color.Gray
 
         ElseIf chklstbox_Auto.Items.Count = 0 Then
-            MessageBox.Show("Inainte de a adauga un nou autoturism, trebuie sa afisati lista!", " Information ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            message.Show("Inainte de a adauga un nou autoturism, trebuie sa afisati lista!", " Information ", MessageBoxButtons.OK)
+
         Else
             txtMarca.BackColor = Color.White
             txtModel.BackColor = Color.White
@@ -96,7 +97,7 @@ Public Class ListaAuto
             '[ADD] - iteme in ListChekedBox
             chklstbox_Auto.Items.Add(autoo.ToString())
             '[INFO] - mesaj care ne specifica ce inregistrare a fost adaugata
-            MessageBox.Show($"Autoturismul [MARCA] : {autoo.Marca} - [MODELUL] : {autoo.Model} a fost adaugat cu succes in lista!", " Information ", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
+            message.Show($"Autoturismul [MARCA] : {autoo.Marca} - [MODELUL] : {autoo.Model} a fost adaugat cu succes in lista!", " Information ", MessageBoxButtons.OK)
             '[INFO] - Dupa ce obiectul a fost adaugat cu succes, se sterg toate informatiile din respectivele textBox-uri.
             ClearTxtBox()
             Actualizez_Info()
@@ -108,14 +109,14 @@ Public Class ListaAuto
 #Region "Adauga Informatii in lista favorita"
     Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton3.Click
         If chklstbox_Auto.CheckedItems.Count = 0 Then
-            MessageBox.Show("Te rugam sa selectati cel putin o optiune din lista de mai sus!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            message.Show("Te rugam sa selectati cel putin o optiune din lista de mai sus!", "Info", MessageBoxButtons.OK)
         Else
             '[ADD] - sterge lista si o reactualizeaza
             lstBoxAuto.Items.Clear()
             For Each item In chklstbox_Auto.CheckedItems
                 lstBoxAuto.Items.Add(item)
             Next
-            MessageBox.Show("Informatiile au fost adaugate cu succes!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            message.Show("Informatiile au fost adaugate cu succes!", "Info", MessageBoxButtons.OK)
 
         End If
 
@@ -138,6 +139,12 @@ Public Class ListaAuto
 #Region "Informatii despre ChekBoxList - Auto "
     Private Sub chklstbox_Auto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles chklstbox_Auto.SelectedIndexChanged
         'nr de iteme selectate din CheckListBox
+        ChekedItemInListBoxItems()
+    End Sub
+#End Region
+
+#Region "Verifica ce iteme sunt selectae"
+    Private Sub ChekedItemInListBoxItems()
         Dim itemsCheked = chklstbox_Auto.CheckedItems.Count
 
         'nr total de iteme din CheckListBox
@@ -206,7 +213,7 @@ Public Class ListaAuto
         If MaterialCheckBox1.Checked = True Then
             MaterialCheckBox1.Checked = False
         Else
-            MessageBox.Show("Pentru a putea selecta toate informatiile, ar trebui ca sa afisati informatiile apasand butonul de mai jos!", "Informatie", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            message.Show("Pentru a putea selecta toate informatiile, ar trebui ca sa afisati informatiile apasand butonul de mai jos!", "Informatie", MessageBoxButtons.OK)
 
         End If
     End Sub
@@ -224,7 +231,7 @@ Public Class ListaAuto
                 End If
             Next
         Else
-            MessageBox.Show("Momentan lista dumneavoastra cu autoturisme favorite nu  este populata! Selectati si adaugati din lista de mai sus!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            message.Show("Momentan lista dumneavoastra cu autoturisme favorite nu  este populata! Selectati si adaugati din lista de mai sus!", "Info", MessageBoxButtons.OK)
         End If
         VerificCheckBoxDacaEsteBifatIlDebifez()
         Actualizez_Info()
@@ -251,9 +258,9 @@ Public Class ListaAuto
                 '    chklstbox_Auto.SetItemCheckState(i, CheckState.Unchecked)
                 'End If
             Next
-            MessageBox.Show("Inregistrarea/Inregistrarile a fost stearse cu succes!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            message.Show("Inregistrarea/Inregistrarile a fost stearse cu succes!", "Information", MessageBoxButtons.OK)
         Else
-            MessageBox.Show("Trebuie sa selectezi o inregistrare!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            message.Show("Trebuie sa selectezi o inregistrare!", "Information", MessageBoxButtons.OK)
         End If
     End Sub
 #End Region
@@ -267,7 +274,6 @@ Public Class ListaAuto
 
 #Region "Adaugare culoare la panel-ul din stanga"
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
         Panel1.BackColor = Color.FromArgb(38, 50, 56)
     End Sub
 #End Region
@@ -276,12 +282,14 @@ Public Class ListaAuto
     Private Sub btnCauta_Click(sender As Object, e As EventArgs) Handles btnCauta.Click
 
         If txtCauta.Text = String.Empty Then
-            message.Show("Trebuie sa completezi campul de mai sus!", "Informatii", MessageBoxButtons.OK)
+            message.Show("Trebuie sa completati campul de mai sus si apoi sa cautati o anumita informatie!", "Informatii", MessageBoxButtons.OK)
         ElseIf chklstbox_Auto.Items.Count = 0 Then
-            MessageBox.Show("Pentru a cauta o informatie in lista, trebuie sa o afisati si apoi sa cautati!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            message.Show("Pentru a cauta o informatie in lista, trebuie sa o afisati si apoi sa cautati!", "Information", MessageBoxButtons.OK)
         Else
             'chklstbox_Auto.Items.Clear()
             CautaAutov2(txtCauta.Text)
+            ChekedItemInListBoxItems()
+            'sa modifice chekedlsitinfo
             'CautaAuto(txtCauta.Text)
         End If
     End Sub
@@ -319,8 +327,12 @@ Public Class ListaAuto
         Next
         mlblInfoGasite.Text = $"Au fost gasite: {chklstbox_Auto.CheckedItems.Count.ToString()} informatii!"
     End Sub
-#End Region
-End Class
 
+    Private Sub w(sender As Object, e As PaintEventArgs)
+
+    End Sub
+#End Region
+
+End Class
 
 #End Region

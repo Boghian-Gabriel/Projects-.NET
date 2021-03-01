@@ -15,10 +15,10 @@ Public Class Informatii
 
 #Region "FrmOK"
     Private Sub Informatii_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim skinManager As MaterialSkinManager = MaterialSkinManager.Instance
-        skinManager.AddFormToManage(Me)
-        SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
-        SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
+        'Dim skinManager As MaterialSkinManager = MaterialSkinManager.Instance
+        'skinManager.AddFormToManage(Me)
+        'skinManager.Theme = MaterialSkinManager.Themes.LIGHT
+        'skinManager.ColorScheme = New ColorScheme(Primary.Green800, Primary.Green900, Primary.Green500, Accent.LightGreen700, TextShade.WHITE)
     End Sub
 #End Region
 

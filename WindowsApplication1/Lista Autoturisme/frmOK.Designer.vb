@@ -30,6 +30,7 @@ Partial Class Informatii
         '
         Me.mlblInfoFrmOK.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.mlblInfoFrmOK.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.mlblInfoFrmOK.Depth = 0
         Me.mlblInfoFrmOK.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.mlblInfoFrmOK.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -42,6 +43,7 @@ Partial Class Informatii
         '
         'MaterialRaisedButton1
         '
+        Me.MaterialRaisedButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialRaisedButton1.Depth = 0
         Me.MaterialRaisedButton1.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.MaterialRaisedButton1.Location = New System.Drawing.Point(282, 180)
@@ -57,10 +59,10 @@ Partial Class Informatii
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(386, 222)
+        Me.ClientSize = New System.Drawing.Size(386, 223)
         Me.Controls.Add(Me.MaterialRaisedButton1)
         Me.Controls.Add(Me.mlblInfoFrmOK)
-        Me.MaximumSize = New System.Drawing.Size(386, 223)
+        Me.MinimumSize = New System.Drawing.Size(386, 223)
         Me.Name = "Informatii"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Informatii"
