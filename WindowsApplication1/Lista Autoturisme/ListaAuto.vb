@@ -16,7 +16,7 @@ Public Class ListaAuto
         Dim skinManager As MaterialSkinManager = MaterialSkinManager.Instance
         skinManager.AddFormToManage(Me)
         skinManager.Theme = MaterialSkinManager.Themes.LIGHT
-        skinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.Red600, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
+        skinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.Red400, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
         'BlueGrey900
     End Sub
 #End Region
@@ -143,7 +143,7 @@ Public Class ListaAuto
     End Sub
 #End Region
 
-#Region "Verifica ce iteme sunt selectae"
+#Region "Verifica ce iteme sunt selectate"
     Private Sub ChekedItemInListBoxItems()
         Dim itemsCheked = chklstbox_Auto.CheckedItems.Count
 
